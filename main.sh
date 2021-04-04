@@ -171,8 +171,8 @@ echo "Please connect device in DFU mode. Press enter when ready to continue"
 read randomIrrelevant
 
 if [ $device == iPhone10,3 ] || [ $device == iPhone10,6 ]; then
-    git clone https://github.com/akayn/ipwndfu.git
-    cd ipwndfu
+    git clone https://github.com/MatthewPierson/ipwndfuA11
+    cd ipwndfuA11
 else
     git clone https://github.com/MatthewPierson/ipwndfu_public.git
     cd ipwndfu_public
@@ -200,7 +200,7 @@ if [ $device == iPhone10,3 ] || [ $device == iPhone10,6 ]; then
     sleep 1
 else
     echo "Device is NOT an iPhone X, using Linus's signature check remover"
-    python rmsigchks.py
+    python2 rmsigchks.py
     sleep 1
 fi
 cd ..
